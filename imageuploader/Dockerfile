@@ -1,10 +1,10 @@
 FROM python:3.13-slim
 
-# Állítsd be a munkakönyvtárat
-WORKDIR /imageuploader
+# It's the inside of the container
+WORKDIR /usr/src/app
 
 # Másold a requirements.txt fájlt
-COPY requirements.txt .
+COPY imageuploader/requirements.txt .
 
 # Telepítsd a szükséges csomagokat
 RUN pip install --no-cache-dir -r requirements.txt
